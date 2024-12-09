@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if(login == false){ %>
+        Hi there! You seem to not be logged in...
+        <a href="/login">Click me to go log in!</a>
+        <a href="/signup">Click me to go sign up!</a>
+        <% } else{ %>
+        Hello <%= username %>! Welcome to my minigames page! What would you like to play?
+        <br><br>
+        <a href="/tictactoe">Tic-Tac-Toe!</a>
+        <br><br>
+        If you'd like to see the scoreboard, <a href="/scoreboard">click me!</a>
+        <br><br>
+        If you'd like to logout, <a href="/logout">click me!</a>
+        <% } %>
+        <br><br>
+        <% if(check == false){ %>
+            I see you tried logging in already... maybe try signing up if you don't have an account?
+            <% } %>
+</body>
+</html>

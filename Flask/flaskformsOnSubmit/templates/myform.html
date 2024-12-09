@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fun!</title>
+</head>
+
+<body>
+  <h1>Fun Form</h1>
+  
+  <form action="thank_you" method="POST" onsubmit="return validateForm()">
+
+    <!-- THE 'FOR' ATTRIBUTE REFERS TO AN ID -->
+    <label for="id_uname">Tell me your username</label>
+    <input id="id_uname" name="f_username" type="text"><br>
+
+    <label for="id_pass">Tell me your password</label>
+    <input id="id_pass" name="f_password" type="text"> <span id='pwerr'></span> <br>
+
+    <input type="submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      const pw = document.querySelector('#id_pass').value;
+      if (pw.length < 5) {
+        document.querySelector('#pwerr').innerHTML = 'Password Too Short'
+
+        // Prevent the form from submitting
+        return false;
+      } else {
+
+        document.querySelector('#pwerr').innerHTML = ''
+        // Allow the form to submit
+        return true;
+      }
+
+    }
+  </script>
+
+</body>
+</html>

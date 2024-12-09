@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <form action="login_done">
+        <label for="user">Username</label>
+        <input id="user" name="user" type="text"><br>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="text"><br>
+        <input type="submit">
+    </form>
+    <% if(login == false){ %>
+        Sorry... you seem to not be in our database. Try re-entering your username and password.
+        If that still doesn't work, go to our <a href="/signup">sign-up page!</a>
+        <% } %>
+</body>
+</html>

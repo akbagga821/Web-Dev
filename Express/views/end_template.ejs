@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+</head>
+<body>
+    <p>
+        <% if(forecast == null){ %>
+        Uh-oh! Something about your coordinates seems off. Try again?
+        <a href="/weather_form">Click me to go back!</a>
+        <% } else{ %>
+        The forecast for <%= forecast[0].name %> reads: <%= forecast[0].detailedForecast %>
+        <br><br>
+        Additionally, the forecast for <%= forecast[1].name %> is: <%= forecast[1].detailedForecast %>
+        <br><br>
+        And, the forecast for <%= forecast[2].name %> is: <%= forecast[2].detailedForecast %>
+        <% } %>
+    </p>
+</body>
+</html>

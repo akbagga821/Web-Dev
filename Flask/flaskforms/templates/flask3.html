@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fun!</title>
+</head>
+
+<body>
+  <h1>User Verification Form</h1>
+  
+  <form action="flask_3_thanks" method="POST" onsubmit="return validateForm()">
+
+    <!-- THE 'FOR' ATTRIBUTE REFERS TO AN ID -->
+    <label for="id_fverify">Choose your favorite animals</label>
+    <p>Purple</p>
+    <input id="c1" type="checkbox" name="check_01" value="Purple">
+    <p>Blue</p>
+    <input id="c2" type="checkbox" name="check_02" value="Blue">
+    <p>Orange</p>
+    <input id="c3" type="checkbox" name="check_03" value="Orange">
+    <span id="ver"></span><br>
+
+    <label for="id_pass">Are you sure?</label>
+    <input id="t1" type="checkbox" name="t_01" value="Yes">
+    <input id="t2" type="checkbox" name="t_02" value="No">
+    <span id='pwerr'></span> <br>
+
+    <input type="submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      const c1 = document.querySelector('#c1').value;
+      const c2 = document.querySelector('#c2').value;
+      const c3 = document.querySelector('#c3').value;
+      if (c1 == None && c2 == None && c3 == None) {
+        document.querySelector('#ver').innerHTML = 'Please select an answer choice'
+
+        // Prevent the form from submitting
+        return false;
+      } else {
+
+        document.querySelector('#ver').innerHTML = ''
+        // Allow the form to submit
+        return true;
+      }
+
+    }
+  </script>
+
+</body>
+</html>

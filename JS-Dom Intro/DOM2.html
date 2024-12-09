@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hh">click here!</h1>
+    <p id="uno">this is paragraph 1</p>
+    <p id="dos">i don't really know what to write here</p>
+    <p id="tres">umm.. yeah, i'm not that creative</p>
+    <h5 id="cuatro">header... but is it a header?</h6>
+    <h5 id="cinco">i have a spanish test today but it's okay i'll ace it</h6>
+    <h5 id="seis">kiwi kiwi not the bird i love kiwi</h6>
+    <script>
+        let hl = document.querySelectorAll("h5");
+        let pl = document.querySelectorAll("p");
+        for(let i = 0; i < pl.length; i++){
+                pl[i].addEventListener("click", colorChangeFunction("#" + pl[i].id))
+            }
+        hl.forEach((item) => {item.addEventListener("click", () => item.style.color = 'red')})
+
+        head.addEventListener("click", myClickFunction)
+        hl.addEventListener("click", myFunction)
+
+
+        function colorChangeFunction(arg){
+            document.querySelector(arg).style.color = "blue"
+        }
+    </script>
+</body>
+</html>

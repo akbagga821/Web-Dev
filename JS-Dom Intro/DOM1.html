@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="chicky">this is a paragraph! click me and see what color I change to.</p>
+    <p id="cat">this is my second paragraph! I wonder what will happen if you click on me this time?</p>
+    <h2 id="head">wow this is a header</h2>
+    <h4 id="groo">this is a smaller header..</h4>
+
+    <script>
+        let c = document.getElementById("chicky").onclick = functionOne;
+        let c2 = document.querySelector("#cat").onclick = functionTwo;
+        let ch = document.querySelector("#head");
+        let fh = document.querySelector("#groo");
+
+
+        let count = 0;
+
+        ch.addEventListener("click", myClickFunction)
+        fh.addEventListener("click", myClick2)
+        
+        function myClickFunction(){
+            if(count % 2 == 0){
+                console.log(count);
+                ch.style.backgroundColor = "magenta";
+                count++;
+            }
+            else{
+                console.log(count);
+                ch.style.backgroundColor = "salmon";
+                count++;
+            }
+        }
+
+        function myClick2(){
+            console.log(document.querySelector("#groo").id);
+        }
+
+        function functionOne(){
+            document.getElementById("chicky").style.color = "red";
+        }
+        
+        function functionTwo(){
+            document.querySelector("#cat").style.color = "blue";
+        }
+    </script>
+</body>
+</html>

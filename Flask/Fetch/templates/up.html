@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <h3>Upvote Counter</h3>
+  <p id='upvotes'></p>
+  <button type="button" onclick="doTheFetch()">PRESS ME</button>
+
+
+
+  <script>
+    async function doTheFetch() {
+        const response = await fetch('http://127.0.0.1/upvote_counter')
+        const data = await response.json()
+        let counter_span = document.getElementById("upvotes")
+        counter_span.innerHTML = data.upvotes;
+    }    
+  </script>
+</body>
+</html>
